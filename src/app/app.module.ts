@@ -8,6 +8,7 @@ import { ProductoComponent } from './producto/producto.component';
 import { FacturaComponent } from './factura/factura.component';
 import { RouterModule, Routes } from '@angular/router';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { DetalleFacturaComponent } from './detalle-factura/detalle-factura.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,11 @@ const routes: Routes = [
   {
     path: 'cliente',
     component:ClienteComponent
+  },
+  {
+    path:'detalle-factura',
+    component:DetalleFacturaComponent
+
   }
 ]
 
@@ -30,7 +36,8 @@ const routes: Routes = [
     AppComponent,
     ClienteComponent,
     ProductoComponent,
-    FacturaComponent
+    FacturaComponent,
+    DetalleFacturaComponent
   ],
   imports: [
     BrowserModule,

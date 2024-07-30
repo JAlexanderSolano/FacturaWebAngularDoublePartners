@@ -16,4 +16,7 @@ export class FacturaComponent {
   Producto(){
     this.router.navigate(['producto'])
   }
+  Factura(){
+    this.router.navigate(['detalle-factura'])
+  }
 }

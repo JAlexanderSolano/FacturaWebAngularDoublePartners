@@ -1,1 +1,29 @@
-<p>producto works!</p>
+<div class="card">
+    <div class="card-body">
+        <form (ngSubmit)="GuardarProducto()">
+            <div class="mb-2">
+                <label class="form-label text-success">Nombre de producto</label>
+                <input type="text" class="form-control" name="nombre" placeholder="Ingrese el producto" [(ngModel)]="producto.nombreProducto">
+            </div>
+            <div class="mb-2">
+                <label class="form-label text-success">Imagen</label>
+                <input type="file" class="form-control" name="imagen" (change)="CapturarImagen($event)">
+            </div>
+            <div class="mb-2" *ngIf="previsualizacion">
+                <img [src]="previsualizacion" alt="imgaenProd" width="100px">
+            </div>
+            <div class="mb-2">
+                <label class="form-label text-success">Precio unitario</label>
+                <input type="text" class="form-control" name="preciounitario" [(ngModel)]="producto.PrecioUnitario" placeholder="Ingrese el precio unitario">
+            </div>
+            <div class="mb-2">
+                <label class="form-label text-success">Existencias</label>
+                <input type="text" class="form-control" name="existencias" [(ngModel)]="producto.Existencias" placeholder="Ingrese las existencias del producto">
+            </div>
+            <div class="mb-2">
+               <button class="btn btn-success" >Guardar</button>
+               <button class="btn btn-success" style="margin-left: 5px;" (click)="Regresar()">Regresar</button>
+            </div>
+        </form>
+    </div>
+</div>

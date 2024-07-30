@@ -9,6 +9,7 @@
             <div class="mb-2">
                 <label for="" class="form-label">Tipo Cliente</label>
                 <select name="tipocliente" class="form-control" [(ngModel)]="cliente.idTipoCliente">
+                <option value="0">Seleccione</option>
                 <option *ngFor="let _data of tipoCliente" 
                 value="{{_data.id}}">{{_data.tipoCliente}}</option>
             </select>
