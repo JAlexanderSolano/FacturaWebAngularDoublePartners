@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './factura.component.html',
   styleUrl: './factura.component.css'
 })
-export class FacturaComponent {
+export class FacturaComponent implements OnInit{
   constructor(private router:Router){}
 
   Cliente(){
@@ -18,5 +18,9 @@ export class FacturaComponent {
   }
   Factura(){
     this.router.navigate(['detalle-factura'])
+  }
+
+  ngOnInit(): void {
+    
   }
 }

@@ -1,1 +1,32 @@
-<p>detalle-factura works!</p>
+<div class="card">
+    <h2 class="text-success text-center">Registrar factura</h2>
+    <div class="card-body">
+        <div class="mb-2">
+            <label class="text-success">Cliente</label>
+            <select name="cliente" class="form-control" [(ngModel)]="factura.cliente">
+                <option value="0">Seleccione</option>
+                <option *ngFor="let _data of lsClientes" value="{{_data.idCliente}}">{{_data.razonSocial}}</option>
+            </select>
+        </div>
+        <div class="mb-2">
+            <label class="text-success">Producto</label>
+            <select name="cliente" class="form-control" [(ngModel)]="factura.cliente">
+                <option value="0">Seleccione</option>
+                <option *ngFor="let _data of lsProductos" value="{{_data.id}}">{{_data.nombreProducto}}</option>
+            </select>
+        </div>
+        <div class="mb-2">
+            <label class="text-success">Cantidad</label>
+            <input type="text" class="form-control" name="cantidad" [(ngModel)]="factura.Cantidad" 
+            placeholder="Ingrese la cantidad que desea agregar">
+        </div>
+        <div class="mb-2">
+            <label class="text-success">Nota</label>
+            <textarea name="notas" class="form-control" [(ngModel)]="factura.Nota"></textarea>
+        </div>
+        <div class="mb-2">
+            <button class="btn btn-success">Generar factura</button>
+            <button class="btn btn-success" style="margin-left: 5px; resize: none;" (click)="Regresar()">Regresar</button>
+        </div>
+    </div>
+</div>
